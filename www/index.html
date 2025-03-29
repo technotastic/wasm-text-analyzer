@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Text Analysis Tool</h1>
+            <p>Analyze your text with WebAssembly-powered processing</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Input Text</h2>
+                <textarea id="text-input" placeholder="Paste or type your text here..."></textarea>
+                <button id="analyze-btn">Analyze Text</button>
+            </div>
+
+            <div class="results-section">
+                <h2>Analysis Results</h2>
+                <div class="results-container">
+                    <div class="metrics">
+                        <h3>Basic Metrics</h3>
+                        <div id="basic-metrics">
+                            <p>Words: <span id="word-count">0</span></p>
+                            <p>Characters: <span id="character-count">0</span></p>
+                            <p>Sentences: <span id="sentence-count">0</span></p>
+                            <p>Paragraphs: <span id="paragraph-count">0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="readability">
+                        <h3>Readability</h3>
+                        <div id="readability-score">
+                            <p>Flesch-Kincaid Grade Level: <span id="fk-score">0.0</span></p>
+                            <div id="readability-gauge">
+                                <div id="gauge-fill"></div>
+                            </div>
+                            <p id="readability-interpretation">No text analyzed yet</p>
+                        </div>
+                    </div>
+
+                    <div class="keywords">
+                        <h3>Top Keywords</h3>
+                        <div id="keywords-list"></div>
+                    </div>
+
+                    <div class="sentiment">
+                        <h3>Sentiment Analysis</h3>
+                        <div id="sentiment-score">
+                            <p>Overall Sentiment: <span id="sentiment-value">Neutral</span></p>
+                            <div id="sentiment-meter">
+                                <div id="sentiment-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Rust and WebAssembly | © 2025</p>
+        </footer>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
